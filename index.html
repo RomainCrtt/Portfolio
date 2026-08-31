@@ -6,22 +6,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <title>Portfolio - Romain Carette</title>
     <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.ico">
     <script src="js/code.js"></script>
 </head>
 <body>
-    <div id="preloader"></div>
-    <div class="container">
-        <div class="profile">
-            <img src='img/Romain.jpg' alt="Romain Carette">
-            <div class="text">
+    <div id="prechargement"></div>
+    <div class="conteneur">
+        <div class="profil">
+            <img src='img/imgmoi.jpg' alt="Romain Carette">
+            <div class="texte">
                 <h1>Romain Carette</h1>
                 <h3>-</h3>
                 <h2>Développeur Full-Stack</h2>
-                <a href="img/Romain_Carette_CV.pdf" download class="btn-cv" target="_blank">Mon CV</a>
+                <a href="img/CV_Romain.pdf" download class="bouton-cv" target="_blank">Mon CV</a>
             </div>
         </div>
         <div class="infos">
-            <a href="#Apropos" class="nav new">A propos</a>
+            <a href="#Apropos" class="nav nouveau">A propos</a>
             <a href="#Formation" class="nav">Formation</a>
             <a href="#Competence" class="nav">Compétences</a>
             <a href="#Projets" class="nav">Projets</a>
@@ -29,36 +30,47 @@
             <a href="#Contact" class="nav">Contact</a>
         </div>
         <section id="Apropos" class="Apropos">
-            <div class="boxed">
+            <div class="encadre">
                 <img src="img/imgapropos.jpg" alt="À propos de moi">
-                <div class="text">
+                <div class="texte">
                     <h2>A PROPOS DE MOI</h2>
-                    <p>À 19 ans, je suis actuellement en BTS Services informatiques aux organisations. J’ai acquis des compétences dans plusieurs langages web (HTML, CSS, JavaScript, PHP), ainsi qu'en gestion de bases de données MySQL. Je maîtrise également le développement d'applications lourdes et mobiles (C#, Python, Java, Flutter). Mon objectif est de poursuivre mes études avec un bachelor en développement informatique en alternance.</p>
+                    <p>À 21 ans, je suis actuellement en Licence Informatique 3ème année à l'université de Lens. J'ai acquis des compétences dans plusieurs langages web (HTML, CSS, JavaScript, PHP, Symfony), ainsi qu'en gestion de bases de données MySQL. Je maîtrise également le développement d'applications lourdes (C#, Python, Java, C). Mon objectif est de poursuivre mes études avec un master en alternance.</p>
                 </div>
             </div>
         </section>
         <section id="Formation" class="Formation">
-            <div class="container">
+            <div class="conteneur">
                 <h2>Formation</h2>
-                <p class="subtitle">Formation & Parcours </p>
-                
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content left">
+                <p class="sous-titre">Formation & Parcours </p>
+
+                <div class="chronologie">
+                    <div class="element-chronologie">
+                        <div class="contenu-chronologie gauche">
+                            <h3>2025-2027</h3>
+                            <h4>Licence Informatique</h4>
+                            <p>Formation à l'université de l'Artois en intégrant la L2 directement jusqu'à la L3.</p>
+                        </div>
+                        <div class="icone-chronologie">
+                            <img src="img/diplome.jpg" alt="Licence">
+                        </div>
+                    </div>
+                <div class="chronologie">
+                    <div class="element-chronologie">
+                        <div class="contenu-chronologie gauche">
                             <h3>2023-2025</h3>
                             <h4>BTS Services Informatiques aux Organisations</h4>
                             <p>Formation au Lycée André Malraux à Béthune avec la spécialité SLAM (Solution Logiciel Application Métier).</p>
                         </div>
-                        <div class="timeline-icon">
+                        <div class="icone-chronologie">
                             <img src="img/logo-btssio.png" alt="BTS SIO">
                         </div>
                     </div>
-        
-                    <div class="timeline-item">
-                        <div class="timeline-icon">
-                            <img src="img/diplome.jpg" alt="BTS SIO">
+
+                    <div class="element-chronologie">
+                        <div class="icone-chronologie">
+                            <img src="img/diplome.jpg" alt="Bac">
                         </div>
-                        <div class="timeline-content right">
+                        <div class="contenu-chronologie droite">
                             <h3>2020 - 2023</h3>
                             <h4>Bac Général</h4>
                             <p>Formation au Lycée André Malraux à Béthune avec les spécialités Mathématiques ainsi que Numérique et sciences informatiques.</p>
@@ -67,105 +79,127 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="Competence" class="Competence">
-            <div class="competence_grid">
+            <div class="grille_competences">
                 <h2><a href ="img/TableauSyntheseBTSCaretteRomain.jpg" target="_blank">Compétences</a></h2>
-                <div class="cards">
-                    <div class="card" onclick="this.classList.toggle('flipped')">
-                        <div class="card-inner">
-                            <div class="card-front">
+                <div class="cartes">
+                    <div class="carte">
+                        <div class="carte-interieur">
+                            <div class="carte-recto">
                                 <h3>HTML</h3>
                             </div>
-                            <div class="card-back">
+                            <div class="carte-verso">
                                 <p>Niveau : <br><br>
                                     ★★★☆☆</p>
                             </div>
                         </div>
                     </div>
-                    <div class="card" onclick="this.classList.toggle('flipped')">
-                        <div class="card-inner">
-                            <div class="card-front">
+                    <div class="carte">
+                        <div class="carte-interieur">
+                            <div class="carte-recto">
                                 <h3>CSS</h3>
                             </div>
-                            <div class="card-back">
+                            <div class="carte-verso">
                                 <p>Niveau : <br><br>
                                     ★★☆☆☆</p>
                             </div>
                         </div>
                     </div>
-                    <div class="card" onclick="this.classList.toggle('flipped')">
-                        <div class="card-inner">
-                            <div class="card-front">
+                    <div class="carte">
+                        <div class="carte-interieur">
+                            <div class="carte-recto">
                                 <h3>JavaScript</h3>
                             </div>
-                            <div class="card-back">
+                            <div class="carte-verso">
                                 <p>Niveau : <br><br>
                                     ★★☆☆☆</p>
                             </div>
                         </div>
                     </div>
-                    <div class="card" onclick="this.classList.toggle('flipped')">
-                        <div class="card-inner">
-                            <div class="card-front">
+                    <div class="carte">
+                        <div class="carte-interieur">
+                            <div class="carte-recto">
                                 <h3>PHP</h3>
                             </div>
-                            <div class="card-back">
+                            <div class="carte-verso">
                                 <p>Niveau : <br><br>
                                     ★★★★☆</p>
                             </div>
                         </div>
                     </div>
-                    <div class="card" onclick="this.classList.toggle('flipped')">
-                        <div class="card-inner">
-                            <div class="card-front">
+                    <div class="carte">
+                        <div class="carte-interieur">
+                            <div class="carte-recto">
                                 <h3>MySQL</h3>
                             </div>
-                            <div class="card-back">
+                            <div class="carte-verso">
                                 <p>Niveau : <br><br>
                                     ★★★★☆</p>
                             </div>
                         </div>
                     </div>
-                    <div class="card" onclick="this.classList.toggle('flipped')">
-                        <div class="card-inner">
-                            <div class="card-front">
+                    <div class="carte">
+                        <div class="carte-interieur">
+                            <div class="carte-recto">
                                 <h3>Wordpress</h3>
                             </div>
-                            <div class="card-back">
+                            <div class="carte-verso">
                                 <p>Niveau : <br><br>
                                     ★★★☆☆</p>
                             </div>
                         </div>
                     </div>
-                    <div class="card" onclick="this.classList.toggle('flipped')">
-                        <div class="card-inner">
-                            <div class="card-front">
+                    <div class="carte">
+                        <div class="carte-interieur">
+                            <div class="carte-recto">
                                 <h3>Symfony</h3>
                             </div>
-                            <div class="card-back">
+                            <div class="carte-verso">
                                 <p>Niveau : <br><br>
                                     ★★★☆☆</p>
                             </div>
                         </div>
                     </div>
-                    <div class="card" onclick="this.classList.toggle('flipped')">
-                        <div class="card-inner">
-                            <div class="card-front">
+                    <div class="carte">
+                        <div class="carte-interieur">
+                            <div class="carte-recto">
                                 <h3>C#</h3>
                             </div>
-                            <div class="card-back">
+                            <div class="carte-verso">
                                 <p>Niveau : <br><br>
                                     ★★★★☆</p>
                             </div>
                         </div>
                     </div>
-                    <div class="card" onclick="this.classList.toggle('flipped')">
-                        <div class="card-inner">
-                            <div class="card-front">
+                    <div class="carte">
+                        <div class="carte-interieur">
+                            <div class="carte-recto">
                                 <h3>Python</h3>
                             </div>
-                            <div class="card-back">
+                            <div class="carte-verso">
+                                <p>Niveau : <br><br>
+                                    ★★★☆☆</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carte">
+                        <div class="carte-interieur">
+                            <div class="carte-recto">
+                                <h3>Java</h3>
+                            </div>
+                            <div class="carte-verso">
+                                <p>Niveau : <br><br>
+                                    ★★☆☆☆</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carte">
+                        <div class="carte-interieur">
+                            <div class="carte-recto">
+                                <h3>C</h3>
+                            </div>
+                            <div class="carte-verso">
                                 <p>Niveau : <br><br>
                                     ★★★☆☆</p>
                             </div>
@@ -175,177 +209,235 @@
             </div>
         </section>
         <section id="Projets" class="Projets">
-            <div class="container">
+            <div class="conteneur">
                 <h2>Projets</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <img src="img/portfolio.png" alt="Projet 1">
-                        <h3>Portfolio</h3>
-                        <p>Portfolio réalisé en HTML, CSS et JavaScript.</p>
-                        <button class="voir-plus" onclick="ouvrirPlus('modal1')">Voir plus</button>
+
+                <div class="carrousel-unique">
+                    <button class="fleche-carrousel gauche" onclick="projetPrecedent()">&#10094;</button>
+                    <div class="fenetre-carrousel">
+                        <div class="carte-projet active">
+                            <img src="img/portfolio.png" alt="Portfolio">
+                            <h3>Portfolio</h3>
+                            <p>Portfolio réalisé en HTML, CSS et JavaScript.</p>
+                            <button class="voir-plus" onclick="ouvrirPlus('modale1')">Voir plus</button>
+                        </div>
+
+                        <div class="carte-projet">
+                            <img src="img/Pendu.png" alt="Pendu">
+                            <h3>Pendu</h3>
+                            <p>Application réalisée en C# suivant les règles du Pendu.</p>
+                            <button class="voir-plus" onclick="ouvrirPlus('modale2')">Voir plus</button>
+                        </div>
+
+                        <div class="carte-projet">
+                            <img src="img/Qui-est-ce.png" alt="Qui-est-ce">
+                            <h3>Qui-est-ce</h3>
+                            <p>Application réalisée en C# suivant les règles du Qui-est-ce.</p>
+                            <button class="voir-plus" onclick="ouvrirPlus('modale3')">Voir plus</button>
+                        </div>
+
+                        <div class="carte-projet">
+                            <img src="img/tron.png" alt="Tron">
+                            <h3>Tron</h3>
+                            <p>Jeu du Tron réalisé en HTML, CSS et JavaScript, jouable à 2 simultanément.</p>
+                            <button class="voir-plus" onclick="ouvrirPlus('modale4')">Voir plus</button>
+                        </div>
+
+                        <div class="carte-projet">
+                            <img src="img/jeudelavie.png" alt="JeuDeLaVie">
+                            <h3>Jeu de la vie</h3>
+                            <p>Application en Python console et graphique reprenant les règles du jeu de la vie</p>
+                            <button class="voir-plus" onclick="ouvrirPlus('modale5')">Voir plus</button>
+                        </div>
                     </div>
-                    <div class="project-card">
-                        <img src="img/Pendu.png" alt="Projet 2">
-                        <h3>Pendu</h3>
-                        <p>Application réalisée en C# suivant les règles du Pendu.</p>
-                        <button class="voir-plus" onclick="ouvrirPlus('modal2')">Voir plus</button>
-                    </div>
-                    <div class="project-card">
-                        <img src="img/Qui-est-ce.png" alt="Projet 3">
-                        <h3>Qui-est-ce</h3>
-                        <p>Application réalisée en C# suivant les règles du Qui-est-ce.</p>
-                        <button class="voir-plus" onclick="ouvrirPlus('modal3')">Voir plus</button>
-                    </div>
+                    <button class="fleche-carrousel droite" onclick="projetSuivant()">&#10095;</button>
                 </div>
             </div>
         </section>
-        
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="fermerPlus('modal1')">&times;</span>
+
+        <div id="modale1" class="modale">
+            <div class="contenu-modale">
+                <span class="fermer" onclick="fermerPlus('modale1')">&times;</span>
                 <h2>Portfolio</h2>
                 <p>Ce portfolio a été réalisé entièrement à la main, en utilisant les langages de programmation HTML, CSS, Javascript. On y trouve des infos sur moi, ainsi que les compétences acquises avec ma formation. Au-delà de ces compétences on y trouve les certifications que j'ai pus passer en autodidacte, mes projets et comment me contacter.
-                    <br><br><a href ="https://github.com/Alnwick62/Portfolio.git" target="_blank">Github</a>
+                    <br><br><a href="https://github.com/RomainCrtt/Portfolio.git" target="_blank">Github</a>
                 </p>
             </div>
         </div>
-        
-        <div id="modal2" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="fermerPlus('modal2')">&times;</span>
+
+        <div id="modale2" class="modale">
+            <div class="contenu-modale">
+                <span class="fermer" onclick="fermerPlus('modale2')">&times;</span>
                 <h2>Pendu</h2>
                 <p>Cette application a été réalisée en C#, elle permet de jouer au jeu du "Pendu", qui consiste à devoir trouver en mot, en proposant des lettres, avec un nombre d'essais limités.
-                    <br><br><a href ="https://github.com/Alnwick62/Pendu.git" target="_blank">Github</a></p>
+                    <br><br><a href="https://github.com/RomainCrtt/Pendu.git" target="_blank">Github</a></p>
             </div>
         </div>
-        
-        <div id="modal3" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="fermerPlus('modal3')">&times;</span>
+
+        <div id="modale3" class="modale">
+            <div class="contenu-modale">
+                <span class="fermer" onclick="fermerPlus('modale3')">&times;</span>
                 <h2>Qui-est-ce</h2>
                 <p>Cette application a été réalisée en C#, elle permet de jouer au jeu "Qui-est-ce", qui consiste à trouver la personne choisie par le bot en face de vous.
                     Cette application permet plusieurs niveaux de difficultés, qui fera varier le nombre de questions avant que le bot n'essaie de trouver votre personnage.
+                    <br><br><a href="https://github.com/RomainCrtt/Qui-est-ce.git" target="_blank">Github</a>
+                </p>
+            </div>
+        </div>
 
-                    <br><br><a href ="https://github.com/Alnwick62/Qui-est-ce.git" target="_blank">Github</a>
+        <div id="modale4" class="modale">
+            <div class="contenu-modale">
+                <span class="fermer" onclick="fermerPlus('modale4')">&times;</span>
+                <h2>Tron</h2>
+                <p>Ce jeu du Tron a été réalisé dans le cadre d'un projet en 2ème année de licence, en HTML CSS & Javascript.
+                    Il est jouable par 2 personnes simultanément.
+                    <br><br><a href="https://github.com/RomainCrtt/ProjetTron/tree/Romain" target="_blank">Github</a>
+                </p>
+            </div>
+        </div>
+
+        <div id="modale5" class="modale">
+            <div class="contenu-modale">
+                <span class="fermer" onclick="fermerPlus('modale5')">&times;</span>
+                <h2>Jeu de la vie</h2>
+                <p>Cette application en Python est éxecutable en version graphique et console, permettant de placer ou non des cellules et simuler le jeu de la vie.
+                    <br><br><a href="https://github.com/RomainCrtt/JeuDeLaVie" target="_blank">Github</a>
                 </p>
             </div>
         </div>
         <section id="Certifications" class="Certifications">
-            <div class="container">
+            <div class="conteneur">
                 <h2>Certifications</h2>
-                <p class="subtitle">Certifications obtenues</p>
-                
-                <div class="certification-grid">
-                    <div class="certification-card">
+                <p class="sous-titre">Certifications obtenues</p>
+
+                <div class="grille-certifications">
+                    <div class="carte-certification">
+                        <img src="img/ANSSI_Logo.png" alt="Certification 4">
+                        <h3>Devenez développeur java</h3>
+                        <p>Udemy - 2025</p>
+                        <button class="voir-plus" onclick="ouvrirPlus('certif4')">Certificat</button>
+                    </div>
+                    <div class="carte-certification">
                         <img src="img/linkedin-icon.svg" alt="Certification 1">
                         <h3>L'Essentiel de Java</h3>
                         <p>LinkedIn Learning - 2024</p>
                         <button class="voir-plus" onclick="ouvrirPlus('certif1')">Certificat</button>
                     </div>
-                    <div class="certification-card">
+                    <div class="carte-certification">
                         <img src="img/CNIL_logo_2016.png" alt="Certification 2">
                         <h3>Ateliers RGPD</h3>
                         <p>CNIL - 2024</p>
                         <button class="voir-plus" onclick="ouvrirPlus('certif2')">Certificat</button>
                     </div>
-                    <div class="certification-card">
+                    <div class="carte-certification">
                         <img src="img/ANSSI_Logo.png" alt="Certification 3">
                         <h3>ANSSI</h3>
                         <p>SecNumacadémie - 2023</p>
                         <button class="voir-plus" onclick="ouvrirPlus('certif3')">Certificat</button>
                     </div>
-                </div>
             </div>
         </section>
-        
-        <div id="certif1" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="fermerPlus('certif1')">&times;</span>
+
+        <div id="certif1" class="modale">
+            <div class="contenu-modale">
+                <span class="fermer" onclick="fermerPlus('certif1')">&times;</span>
                 <h2>L'Essentiel de Java</h2>
                 <p>Cette certification m'a permis d'apprendre et d'approfondir mon niveau dans le langage de programmation Java.</p>
                 <img src="img/certif_java.jpg" alt="Certification Java">
             </div>
         </div>
-        
-        <div id="certif2" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="fermerPlus('certif2')">&times;</span>
+
+        <div id="certif2" class="modale">
+            <div class="contenu-modale">
+                <span class="fermer" onclick="fermerPlus('certif2')">&times;</span>
                 <h2>Atelier RGPD</h2>
                 <p>Cette certification m'a permis de renforcer mes connaissances en cybersécurité</p>
                 <img src="img/certif.jpg" alt="Certification CNIL">
             </div>
         </div>
-        
-        <div id="certif3" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="fermerPlus('certif3')">&times;</span>
+
+        <div id="certif3" class="modale">
+            <div class="contenu-modale">
+                <span class="fermer" onclick="fermerPlus('certif3')">&times;</span>
                 <h2>MOOC SecNumacadémie</h2>
                 <p>Cette certification m'a permis de renforcer mes connaissances en cybersécurité</p>
                 <img src="img/Anssi_Certificat.jpg" alt="Certification ANSSI">
             </div>
         </div>
-        
-        <section class="contact-section" id="Contact">
-            <div class="contact-container">
-                <h2>Contactez-moi</h2>
-                <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSetdG-XPJ1SjY1vqotDCUFNc5KwgzkSh3wqxBIfQ0eT1c_jOQ/formResponse" method="POST" target="hidden_iframe" onsubmit="submitForm(event)">
-                    <input type="text" name="entry.437168359" id="name" placeholder="Nom" required>
-                
-                    <input type="email" name="entry.347381855" id="email" placeholder="Email" required>
-                
-                    <textarea name="entry.1712603180" id="message" placeholder="Message" required></textarea>
-                
-                    <button type="submit">Envoyer</button>
-                </form>
-                <iframe name="hidden_iframe" style="display: none;"></iframe>
-                <div class="social-icons">
-                    <a href="https://github.com/Alnwick62" target="_blank">
-                        <img src="img/github.png" alt="GitHub" width="40" height="40">
-                    </a>
-                    <a href="https://www.linkedin.com/in/romain-carette/" target="_blank">
-                        <img src="img/linkedin-icon.svg" alt="LinkedIn" width="40" height="40">
-                    </a>
-                    <a href="mailto:romain.carette62400@gmail.com">
-                        <img src="img/contact.png" alt="Mail" width="40" height="40">
-                    </a>
+        <div id="certif4" class="modale">
+            <div class="contenu-modale">
+                <span class="fermer" onclick="fermerPlus('certif4')">&times;</span>
+                <h2>Devenez développeur Java</h2>
+                <p>Cette certification m'a permis d'apprendre et d'approfondir mon niveau dans le langage de programmation Java ainsi que des méthodes et techniques avancées.</p>
+                <img src="img/certif_udemy.jpg" alt="Certification Java">
+            </div>
+        </div>
+
+        <section class="section-contact" id="Contact">
+    <div class="conteneur-contact">
+        <h2>Contactez-moi</h2>
+        <form id="formulaire-contact" onsubmit="envoyerFormulaire(event)">
+            <input type="text" name="nom" id="nom" placeholder="Nom" required>
+
+            <input type="email" name="email" id="email" placeholder="Email" required>
+
+            <textarea name="message" id="message" placeholder="Message" required></textarea>
+
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+            <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+
+            <button type="submit">Envoyer</button>
+        </form>
+        <p id="statut-formulaire"></p>
+        <div class="icones-sociales">
+            <a href="https://github.com/Alnwick62" target="_blank">
+                <img src="img/github.png" alt="GitHub" width="40" height="40">
+            </a>
+            <a href="https://www.linkedin.com/in/romain-carette/" target="_blank">
+                <img src="img/linkedin-icon.svg" alt="LinkedIn" width="40" height="40">
+            </a>
+            <a href="mailto:romain.carette62400@gmail.com">
+                <img src="img/contact.png" alt="Mail" width="40" height="40">
+            </a>
+        </div>
+    </div>
+</section>
+        <section class="section-mentions" id="Mentions">
+            <div id="mentionsModale" class="modale">
+                <div class="contenu-modale">
+                    <span class="fermer" onclick="fermerPlus('mentionsModale')">&times;</span>
+                    <h2>Mentions Légales</h2>
+                    <p><strong>1. Éditeur du site</strong><br>
+                    Le présent site web est un portfolio personnel hébergé par Hostinger.<br>
+                    Responsable de la publication : Romain Carette<br>
+                    Contact : <a href="mailto:romain.carette62400@gmail.com">romain.carette62400@gmail.com</a></p>
+
+                    <p><strong>2. Hébergeur</strong><br>
+                    Hostinger International Ltd.<br>
+                    Adresse : 61 Lordou Vironos Street, 6023 Larnaca, Chypre<br>
+                    Site web : <a href="https://www.hostinger.fr" target="_blank">https://www.hostinger.fr</a></p>
+
+                    <p><strong>3. Propriété intellectuelle</strong><br>
+                    L'ensemble des contenus présents sur ce site (textes, images, graphismes, logos, etc.) sont la propriété exclusive de leur auteur, sauf mention contraire. Toute reproduction, distribution, modification ou utilisation sans autorisation expresse est interdite.</p>
+
+                    <p><strong>4. Crédits et attributions</strong><br>
+                    Certaines images utilisées sur ce site proviennent de Freepik et sont soumises à leur licence d'utilisation.<br>
+                    Freepik : <a href="https://www.freepik.com" target="_blank">https://www.freepik.com</a></p>
+
+                    <p><strong>5. Protection des données personnelles</strong><br>
+                    Ce site ne collecte pas de données personnelles sans votre consentement. Si un formulaire de contact est présent, les informations fournies seront uniquement utilisées pour répondre à vos demandes et ne seront pas cédées à des tiers.</p>
+
+                    <p><strong>6. Responsabilité</strong><br>
+                    L'auteur du site ne saurait être tenu responsable des erreurs ou omissions dans les informations diffusées ni des conséquences pouvant résulter de leur utilisation.</p>
+
+                    <p><strong>7. Contact</strong><br>
+                    Pour toute question ou demande d'information, vous pouvez me contacter à l'adresse suivante : <a href="mailto:romain.carette62400@gmail.com">romain.carette62400@gmail.com</a>.</p>
                 </div>
             </div>
         </section>
-        <section class="mentions-section" id="Mentions">
-        <div id="mentionsModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="fermerPlus('mentionsModal')">&times;</span>
-                <h2>Mentions Légales</h2>
-                <p><strong>1. Éditeur du site</strong><br>
-                Le présent site web est un portfolio personnel hébergé par OMGserv.<br>
-                Responsable de la publication : Romain Carette<br>
-                Contact : <a href="mailto:romain.carette62400@gmail.com">romain.carette62400@gmail.com</a></p>
-        
-                <p><strong>2. Hébergeur</strong><br>
-                OMGserv<br>
-                Adresse : 4 Av. du Château, 94210 Saint-Maur-des-Fossés, France<br>
-                Site web : <a href="https://www.omgserv.com" target="_blank">https://www.omgserv.com</a></p>
-        
-                <p><strong>3. Propriété intellectuelle</strong><br>
-                L'ensemble des contenus présents sur ce site (textes, images, graphismes, logos, etc.) sont la propriété exclusive de leur auteur, sauf mention contraire. Toute reproduction, distribution, modification ou utilisation sans autorisation expresse est interdite.</p>
-        
-                <p><strong>4. Crédits et attributions</strong><br>
-                Certaines images utilisées sur ce site proviennent de Freepik et sont soumises à leur licence d'utilisation.<br>
-                Freepik : <a href="https://www.freepik.com" target="_blank">https://www.freepik.com</a></p>
-        
-                <p><strong>5. Protection des données personnelles</strong><br>
-                Ce site ne collecte pas de données personnelles sans votre consentement. Si un formulaire de contact est présent, les informations fournies seront uniquement utilisées pour répondre à vos demandes et ne seront pas cédées à des tiers.</p>
-        
-                <p><strong>6. Responsabilité</strong><br>
-                L'auteur du site ne saurait être tenu responsable des erreurs ou omissions dans les informations diffusées ni des conséquences pouvant résulter de leur utilisation.</p>
-        
-                <p><strong>7. Contact</strong><br>
-                Pour toute question ou demande d'information, vous pouvez me contacter à l'adresse suivante : <a href="mailto:romain.carette62400@gmail.com">romain.carette62400@gmail.com</a>.</p>
-            </div>
-        </div>
-    </section>    
 </body>
 <footer>
-    <p>&copy; 2025 - Mon Portfolio | <a href="#" onclick="ouvrirPlus('mentionsModal')">Mentions Légales</a></p>
+    <p>&copy; 2026 - Mon Portfolio | <a href="#" onclick="ouvrirPlus('mentionsModale')">Mentions Légales</a></p>
 </footer>
 </html>

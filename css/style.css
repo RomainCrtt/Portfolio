@@ -373,7 +373,8 @@ section {
     cursor: pointer;
 }
 
-.carte-projet:nth-child(3) img {
+
+.carte-projet:nth-child(5) img {
   filter: blur(5px);
 }
 

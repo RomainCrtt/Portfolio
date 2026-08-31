@@ -24,7 +24,11 @@ jobs:
           echo -e "Host *\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
 
       - name: Compress files
+<<<<<<< HEAD
         run: tar -czf portfolio.tar.gz css gif img js index.html
+=======
+        run: tar -czf portfolio.tar.gz css img js index.html
+>>>>>>> 9c9db4bdbde3e7991c35834b32a6648843cdfe2a
 
       - name: Upload archive to server
         run: |

@@ -4,9 +4,17 @@ on:
   push:
     branches: [ master ]
 
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     env:
       SSH_PORT: ${{ secrets.SSH_PORT }}
       SSH_USER: ${{ secrets.SSH_USER }}
@@ -14,28 +22,24 @@ jobs:
       SSH_TARGET_DIR: ${{ secrets.SSH_TARGET_DIR }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
       - name: Setup SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
+          umask 077
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          echo -e "Host *\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/id_deploy
+          echo "vps-fr ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJb/JmXneAjCex98yolrq7/X/bZEeWRjnOZa8k0fdeEW" > ~/.ssh/known_hosts
+          printf 'Host *\n\tIdentityFile ~/.ssh/id_deploy\n\tIdentitiesOnly yes\n\tHostKeyAlias vps-fr\n\tStrictHostKeyChecking yes\n' > ~/.ssh/config
 
       - name: Compress files
         run: tar -czf portfolio.tar.gz css img js index.html
 
       - name: Upload archive to server
-        run: |
-          scp -P $SSH_PORT portfolio.tar.gz $SSH_USER@$SSH_HOST:$SSH_TARGET_DIR/portfolio.tar.gz
+        run: scp -P "$SSH_PORT" portfolio.tar.gz "$SSH_USER@$SSH_HOST:$SSH_TARGET_DIR/portfolio.tar.gz"
 
       - name: Deploy to VPS
         run: |
-          ssh -p $SSH_PORT $SSH_USER@$SSH_HOST "
-            cd $SSH_TARGET_DIR && \
-            tar -xzf portfolio.tar.gz && \
-            rm portfolio.tar.gz && \
-            pm2 delete portfolio || true && \
-            pm2 serve . 3050 --name portfolio --spa
-          "
+          ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "cd '$SSH_TARGET_DIR' && tar -xzf portfolio.tar.gz && rm portfolio.tar.gz"
